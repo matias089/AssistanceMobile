@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar class="top-bar">
+    <div class="margin">
+      <ion-buttons slot="start">
+        <ion-back-button></ion-back-button>
+      </ion-buttons>
+      <ion-title class="">Perfil</ion-title>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <div class="m-l divv" style="display: flex;">
+    <!-- Assuming you have an image URL in userInfo.avatar -->
+    <div class="m-l divv" style="display: flex;">
+      <img class="img-usr" src="assets/img/H2.svg">
+     </div>
+    
+     <div *ngIf="userInfo">
+      <h2>{{ userInfo.nombre_completo }}</h2>
+      <p>{{ userInfo.rut }}</p>
+    </div>
+    
+
+  </div>
+</ion-content>

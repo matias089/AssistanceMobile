@@ -1,0 +1,18 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+     <ion-title>usuarios</ion-title>
+     <ion-buttons slot="start">
+       <ion-back-button defaultHref="home"></ion-back-button>
+     </ion-buttons>
+  </ion-toolbar>
+ </ion-header>
+ 
+ <ion-content>
+  <ion-searchbar (ionChange)="buscarEstudiante($event)"></ion-searchbar>
+  <ion-list>
+    <ion-item *ngFor="let estudiante of estudiantesFiltrados">
+      <ion-label button (click)="mostrarDetalles(estudiante)">Nombre: {{estudiante.nombre_completo}} -</ion-label>
+      <ion-label button (click)="mostrarDetalles(estudiante)"> Rut: {{estudiante.rut}}</ion-label>
+    </ion-item>
+  </ion-list>
+ </ion-content>

@@ -1,0 +1,90 @@
+<ion-menu side="start" contentId="main-content">
+  <ion-header>
+     <ion-toolbar>
+       <ion-title>Menu</ion-title>
+     </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding">
+     <ion-list>
+       <ion-item>
+         <ion-button routerLink="/usuarios">
+           Ver Usuarios
+         </ion-button>
+       </ion-item>
+       <ion-item>
+         <ion-button routerLink="/usuarios">
+           Mostrar Estudiante
+         </ion-button>
+       </ion-item>
+     </ion-list>
+  </ion-content>
+ </ion-menu>
+ 
+ <ion-header>
+  <ion-toolbar class="top-bar">
+     <ion-buttons slot="start">
+       <ion-menu-button></ion-menu-button>
+     </ion-buttons>
+     <ion-title class="">Home</ion-title>
+     <ion-buttons slot="end">
+       <ion-button routerLink="/perfil">
+        <div class="divvv" style="display: flex;">
+          <img class="img-usr" src="assets/img/H1.svg">
+         </div>
+       </ion-button>
+     </ion-buttons>
+  </ion-toolbar>
+ </ion-header>
+ 
+ <ion-content id="main-content"> 
+  
+  <div class="m-l divv" style="display: flex;">
+    <img class="img-usr" src="assets/img/H2.svg">
+    <p style="font-size: 18px; margin-left: 10px;">{{mensaje}}</p>
+   </div>
+
+   <div>
+    <ion-label style="font-size: 16px; margin-left: 24px; margin-top: 10px;">
+      {{ fechaHoy }}
+     </ion-label>
+   </div>
+
+  <div class="center-container">
+    <div class="center">
+       <ion-item class="center">
+         <ion-label position="fixed">Asignatura</ion-label>
+         <ion-label position="fixed">Estado    </ion-label>
+         <ion-label position="fixed">Asistencia</ion-label>
+       </ion-item>
+    </div>
+   </div>
+
+   <div class="centered-image">
+    <img class="bordered-image" src="assets/img/qrcode.svg">
+  </div>
+
+ </ion-content>
+
+ <ion-footer>
+
+  <ion-toolbar class="bot-bar">
+    <div class="toolbar-buttons" style="display: flex; justify-content: center;">
+       <ion-button routerLink="/calendario" style="--background: transparent;">
+         <div class="divvvv" style="display: flex;">
+           <img class="img-cal" src="assets/img/calendario.png">
+         </div>
+       </ion-button>
+       <ion-button routerLink="/home" style="--background: transparent;">
+         <div class="divvv" style="display: flex;">
+           <img class="img-hom" src="assets/img/home.png">
+         </div>
+       </ion-button>
+       <ion-button routerLink="/login" style="--background: transparent;">
+         <div class="divvvv" style="display: flex;">
+           <img class="img-sig" src="assets/img/sign-out.png">
+         </div>
+       </ion-button>
+    </div>
+   </ion-toolbar>
+
+ </ion-footer>
